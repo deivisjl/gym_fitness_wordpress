@@ -105,10 +105,47 @@ img{
 	display: none;
 }
 
+.menu-principal a{
+	font-family: var(--fuentePrincipal);
+	color:var(--blanco);
+	font-size: 2.2rem;
+	padding: .5rem;
+}
+
+.menu-principal .current_page_item{
+	border-bottom: 3px solid var(--colorPrimario);
+}
+
 @media(min-width: 768px){
 
 	.menu-principal{
 		display:flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	.menu-principal .menu{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.menu-principal a{
+		font-size: 2.5rem;
+	}
+
+	.menu-principal li {
+		margin-right: 2rem;
+	}
+
+	.menu-principal li:last-of-type {
+		margin-right: 0;
+	}
+
+	.barra-navegacion{
+		display:flex;
+		justify-content: space-between;
 	}
 }
+
+
 
