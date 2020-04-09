@@ -88,3 +88,27 @@ img{
 	margin:auto;
 }
 
+/**Header**/
+.site-header{
+	background-color: var(--grisOscuro);
+	padding: 2rem 0;
+}
+
+.logo{
+	display: flex;
+	justify-content: center;
+
+}
+
+/** Menu principal **/
+.menu-principal{
+	display: none;
+}
+
+@media(min-width: 768px){
+
+	.menu-principal{
+		display:flex;
+	}
+}
+
