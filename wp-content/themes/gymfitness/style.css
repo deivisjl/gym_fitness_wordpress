@@ -10,3 +10,19 @@
 	Tags: gym, gimnasio, flexbox, css grid, mobile first
 	Text Domain: gymfitness
 */
+
+:root {
+	/** Fuentes **/
+	--fuentePrincipal : 'Staatliches', cursive;
+	--fuenteTexto: 'Open Sans', sans-serif;
+	--fuenteSecundaria: 'Raleway', sans-serif;
+
+	/** Colores **/
+	--colorPrimario: #ff5b00;
+	--grisOscuro: #2f2e2e;
+	--grisClaro: #ebebeb;
+	--blanco: #fff;
+	--black: #000;
+}
+
+
