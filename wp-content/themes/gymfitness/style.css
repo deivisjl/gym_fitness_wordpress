@@ -10,3 +10,7 @@
 	Tags: gym, gimnasio, flexbox, css grid, mobile first
 	Text Domain: gymfitness
 */
+
+body {
+	background-color: red;
+}
