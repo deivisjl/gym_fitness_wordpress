@@ -261,6 +261,7 @@ hr{
 	color: var(--black);
 	text-align: center;
 	font-size: 2.4rem;
+	padding: 0 1rem;
 }
 
 .site-footer .menu-principal a::before, 
