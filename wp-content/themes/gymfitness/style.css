@@ -104,6 +104,19 @@ hr{
 
 }
 
+/** Utilidades **/
+.text-center{
+	text-align: center;
+}
+
+.texto-primario{
+	color: var(--colorPrimario);
+}
+
+.seccion{
+	padding: 5rem 0;
+}
+
 /** Menu principal **/
 .menu-principal{
 	display: none;
@@ -263,3 +276,28 @@ hr{
 }
 
 
+/** Paginas **/
+.pagina h1{
+	margin-bottom: 5rem;
+}
+
+.imagen-destacada{
+	margin-bottom: 3rem;
+}
+
+
+@media(min-width: 768px){
+
+	.pagina.con-sidebar{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.con-sidebar .contenido-principal{
+		flex:  0 0 calc(65% - 2rem);
+	}
+
+	.con-sidebar .sidebar{
+		flex:  0 0 calc(35% - 2rem);	
+	}
+}
