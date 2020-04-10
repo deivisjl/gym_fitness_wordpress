@@ -1,8 +1,15 @@
 <?php 
 	//cuando el tema es activado
 	function gymfitness_setup(){
-
+		//habilitar imagenes destacadas
 		add_theme_support('post-thumbnails');
+
+		//Agregar tamaños personalizados
+		add_image_size('square',350, 350, true);
+		add_image_size('portrait',350, 724, true);
+		add_image_size('cajas',400, 375, true);
+		add_image_size('mediano',700, 400, true);
+		add_image_size('blog',966, 664, true);
 	}
 
 	add_action('after_setup_theme','gymfitness_setup');
