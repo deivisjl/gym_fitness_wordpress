@@ -4,6 +4,14 @@
 	
 	<h1><?php the_title(); ?></h1>
 
+	<?php 
+		if(has_post_thumbnail()) :
+			the_post_thumbnail();
+		else:
+		endif;
+
+	?>
+
 	<?php the_content(); ?>
 
 	Escrito por: <?php the_author(); ?>

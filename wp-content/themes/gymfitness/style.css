@@ -197,7 +197,7 @@ hr{
 	}
 
 	.site-footer .menu-principal .current_page_item{
-		border:none;
+		border:none!important;
 	}
 
 	.copyright{
@@ -206,7 +206,7 @@ hr{
 	}
 }
 
-.site-footer .menu-principal .current_page_item{
+	.site-footer .menu-principal .current_page_item{
 		border-bottom: 3px solid var(--colorPrimario);
 	}
 
