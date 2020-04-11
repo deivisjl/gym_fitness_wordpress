@@ -40,12 +40,22 @@
 		//fuentes de google
 		wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900|Staatliches&display=swap',array(),'1.0.0');
 
+		if(is_page('galeria')) :
+			//cargando el lightbox2
+			wp_enqueue_style('lightboxCSS', get_template_directory_uri().'/css/lightbox.min.css', array(), '2.11.1');
+		endif;
+
 		//la hoja de estilos principal
 		wp_enqueue_style('style', get_stylesheet_uri(), array('normalize','googleFont'), '1.0.0');
 
 		wp_enqueue_script('slicknavJS', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.10', true);
 
 		wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery','slicknavJS'), '1.0.10', true);
+
+		if(is_page('galeria')) :
+			//cargar script de lightbox
+			wp_enqueue_script('lightboxJS', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.1', true);
+		endif;
 	}
 
 	add_action('wp_enqueue_scripts','gymfitness_scripts_styles');
