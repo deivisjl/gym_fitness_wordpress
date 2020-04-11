@@ -12,6 +12,7 @@ if(!defined('ABSPATH')) die();
 
 /**
  * Adds GymFitness_Clases_Widget widget.
+ * Source http://man.hubwiz.com/docset/WordPress.docset/Contents/Resources/Documents/codex.wordpress.org/Widgets_API.html
  */
 class GymFitness_Clases_Widget extends WP_Widget {
 
@@ -39,7 +40,38 @@ class GymFitness_Clases_Widget extends WP_Widget {
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
-		echo esc_html__( 'Hello, World!', 'text_domain' );
+		?>
+		<ul>
+			<?php 
+				$args = array(
+					'post_type' => 'gymfitness_clases',
+					'posts_per_page' => 3,
+					'orderby' => 'rand'
+				);
+
+				$clases = new WP_Query($args);
+				while($clases->have_posts()) : $clases->the_post();
+			 ?>
+				
+				<li class="clase-sidebar">
+					<div class="imagen">
+						<?php the_post_thumbnail('thumbnail'); ?>
+					</div>
+					<div class="contenido-clase">
+						<a href="<?php the_permalink(); ?>">
+							<h3><?php the_title(); ?></h3>
+						</a>
+					</div>
+						<?php
+							$hora_inicio = get_field('hora_inicio');
+							$hora_fin = get_field('hora_fin');
+						 ?>
+						 <p class="informacion-clase"><?php the_field('dias_clase'); ?> - <?php echo $hora_inicio . " a " . $hora_fin; ?></p>
+				</li>
+
+			 <?php endwhile; wp_reset_postdata();?>
+		</ul>
+		<?php 
 		echo $args['after_widget'];
 	}
 
