@@ -67,12 +67,12 @@ class GymFitness_Clases_Widget extends WP_Widget {
 						<a href="<?php the_permalink(); ?>">
 							<h3><?php the_title(); ?></h3>
 						</a>
-					</div>
 						<?php
 							$hora_inicio = get_field('hora_inicio');
 							$hora_fin = get_field('hora_fin');
 						 ?>
 						 <p class="informacion-clase"><?php the_field('dias_clase'); ?> - <?php echo $hora_inicio . " a " . $hora_fin; ?></p>
+					</div>
 				</li>
 
 			 <?php endwhile; wp_reset_postdata();?>
