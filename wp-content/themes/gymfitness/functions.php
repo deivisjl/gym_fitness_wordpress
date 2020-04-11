@@ -1,4 +1,7 @@
 <?php 
+	//consultas reutilizables
+	require get_template_directory() . '/inc/querys.php';
+
 	//cuando el tema es activado
 	function gymfitness_setup(){
 		//habilitar imagenes destacadas
