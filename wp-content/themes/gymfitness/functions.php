@@ -7,6 +7,8 @@
 		//habilitar imagenes destacadas
 		add_theme_support('post-thumbnails');
 
+		add_theme_support('title-tag');
+
 		//Agregar tamaños personalizados
 		add_image_size('square',350, 350, true);
 		add_image_size('portrait',350, 724, true);
