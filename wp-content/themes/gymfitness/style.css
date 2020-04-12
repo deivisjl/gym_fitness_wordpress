@@ -336,6 +336,22 @@ hr{
 	}
 }
 
+.listado-blog .card .contenido{
+	padding: 0 2rem 2rem 2rem;
+	text-align: center;
+}
+
+@media(min-width: 768px){
+	
+	.listado-blog .card .contenido{
+		text-align: left;
+	}
+}
+
+.listado-blog .card .contenido h3{
+	margin:0;
+}
+
 /** Componente de Cards**/
 .card{
 	margin-bottom: 4rem;
@@ -441,6 +457,58 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	font-size: 1.6rem;
 }
 
+.post-categories{
+	display:flex;
+	justify-content: center;
+}
+
+@media(min-width: 768px){
+	.post-categories{
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		z-index: 10;
+		display: flex;
+	}
+}
+
+/*.post-categories{
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	z-index: 10;
+}*/
+
+.post-categories li{
+	background-color: var(--blanco);
+	padding: .5rem 2rem;
+	margin-right: 2rem; 
+	border-radius: .5rem;
+}
+
+@media(min-width: 768px){
+
+	.post-categories li{
+		background-color: var(--colorPrimario);
+	}
+}
+
+.post-categories li a{
+	font-size: 2.2rem;
+	font-family: var(--fuentePrincipal);
+	color: var(--grisOscuro);
+}
+
+@media(min-width: 768px){
+	
+	.post-categories li a{
+		color:var(--blanco);
+	}
+}
+
+.post-categories li:last-of-type{
+	margin: 0;
+}
 
 /** Clases sidebar **/
 .clase-sidebar{
