@@ -322,12 +322,13 @@ hr{
 }
 
 /** Clases**/
+.listado-blog,
 .lista-clases{
 	margin-top: 4rem;
 }
 
 @media (min-width: 768px){
-
+	.listado-blog,
 	.lista-clases{
 		display: flex;
 		flex-wrap: wrap;
@@ -359,16 +360,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	}
 }
 
+.card{
+	margin-bottom: 4rem;
+	border-bottom: 1px solid var(--grisClaro);
+}
+
+.card:last-of-type{
+	border:none;
+}
+
 @media (min-width: 768px){
 
 	.card{
 		flex: 0 0 calc(50% - 2rem)!important;
 		position: relative;
+		border:none;
 	}
 }
 
 .card .contenido{
-	padding: 3rem;
+	padding: 2rem;
 }
 
 @media (min-width: 768px){
@@ -397,7 +408,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	}
 }
 
-.card. .contenido p{
+.card .contenido p{
 	font-weight: 700;
 	font-size: 2rem;
 	margin: 0;
@@ -409,6 +420,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 		color: var(--colorPrimario);
 	}
 }
+
+.card .contenido .meta,
+.card .contenido .meta a{
+	color: var(--black);
+}
+
+@media(min-width: 768px){
+	.card .contenido .meta,
+	.card .contenido .meta a{
+		color: var(--blanco);
+	}
+}
+
+.card .contenido .meta span{
+	color: var(--colorPrimario);
+}
+
+.card .contenido .meta{
+	font-size: 1.6rem;
+}
+
 
 /** Clases sidebar **/
 .clase-sidebar{
@@ -487,12 +519,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 @media(min-width: 768px){
-	
+
 	.galeria-imagenes li:nth-child(6){
 		grid-column: 2 / 3;
 		grid-row: 2 / 4;
 	}
 }
+
 
 
 
