@@ -40,4 +40,14 @@
 			</li>
 		</ul>
 	</div>
+
+	<section class>
+		<div class="contenedor seccion">
+			<h2 class="text-center texto-primario">Nuestras clases</h2>
+			<?php gymfitness_lista_clases(4); ?>
+			<div class="contenedor-boton">
+				<a href="<?php  echo esc_url(get_permalink(get_page_by_title('Nuestras clases')));?>" class="boton boton-primario">Ver todas las clases</a>
+			</div>
+		</div>
+	</section>
 <?php get_footer(); ?>

@@ -1,9 +1,9 @@
-<?php function gymfitness_lista_clases(){ ?>
+<?php function gymfitness_lista_clases($cantidad = -1){ ?>
 	<ul class="lista-clases">
 		<?php 
 			$args = array(
 				'post_type' => 'gymfitness_clases',
-				'posts_per_page' => 10,
+				'posts_per_page' => $cantidad,
 				'orderby' => 'title',
 				'order' => 'ASC'
 			);
