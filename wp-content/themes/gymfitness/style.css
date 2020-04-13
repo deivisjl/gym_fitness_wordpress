@@ -665,6 +665,11 @@ div.wpcf7-mail-sent-ok{
 	height: 500px;
 }
 
+/** Reescribir estilos menu movil **/
+body.home .slicknav_menu{
+	background-color: transparent;
+}
+
 
 
 
