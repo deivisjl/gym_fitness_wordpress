@@ -50,4 +50,39 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="instructores">
+		<div class="contenedor seccion">
+			<h2 class="text-center texto-primario">Nuestros Instructores</h2>
+			<p class="text-center">Instructores profesionales que te ayudarán a lograr tus objetivos</p>
+			<ul class="listado-instructores">
+				<?php 
+					$args = array(
+						'post_type' => 'instructores',
+						'posts_per_page' => 30,
+					);
+
+					$instructores = new WP_Query($args);
+					while($instructores->have_posts()) : $instructores->the_post();
+				 ?>
+					<li class="instructor">
+						<?php the_post_thumbnail('mediano'); ?>
+						<div class="contenido text-center">
+							<h3><?php the_title(); ?></h3>
+							<?php the_content(); ?>
+							<div class="especialidad">
+								<?php 
+									$esp = get_field('especialidad');
+
+									foreach ($esp as $e) 
+									{?>
+										<span class="etiqueta"><?php echo esc_html($e) ?></span>
+								<?php } ?>
+							</div>
+						</div>
+					</li>
+				 <?php endwhile; wp_reset_postdata();?>
+			</ul>
+		</div>
+	</section>
 <?php get_footer(); ?>
