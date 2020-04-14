@@ -818,5 +818,33 @@ body.home .site-header{
 	background-color: var(--grisClaro);
 }
 
+/** Instructores **/
+.listado-instructores li{
+	margin: 2rem 0;
+	border-bottom: 1px solid var(--grisClaro);
+}
+
+@media(min-width: 768px){
+	.listado-instructores{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.listado-instructores li{
+		flex: 0 0 calc(50% - 2rem);
+		border-bottom: none;
+	}
+}
+
+.instructor img{
+	display: block;
+	height: 400px;
+	object-fit: cover;
+}
+
+.instructor .contenido{
+	padding: 3rem;
+}
 
 
