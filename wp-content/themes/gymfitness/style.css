@@ -724,6 +724,25 @@ body.home .site-header{
 	}
 }
 
+/** Barra fija **/
+@media(min-width: 768px){
+	.fixed-top{
+		position: fixed;
+		width: 100%
+		top:0;
+		left:0;
+		background-color: var(--grisClaro);
+		padding: 1rem 5rem;
+		height: 10rem;
+		z-index:10000;
+		transition: all .3s ease-in-out;
+	}
+
+	.fixed-top{
+		width: 12rem;
+	}
+}
+
 /** front page **/
 .bienvenida p{
 	max-width: 800px;

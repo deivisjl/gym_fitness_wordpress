@@ -5,27 +5,48 @@ jQuery(document).ready(function($){
 	});
 
 	//agregar Slider
-	$('.listado-testimoniales').bxSlider({
-		auto:true,
-		mode:'fade',
-		controls:false
-	});
+	if($('.listado-testimoniales').length > 0){
+		$('.listado-testimoniales').bxSlider({
+			auto:true,
+			mode:'fade',
+			controls:false
+		});
+	}
 
 	//Codigo del mapa
-	const lat = document.querySelector('#lat').value;
-	const lng = document.querySelector('#lng').value;
-	const direccion = document.querySelector('#direccion').value;
+	if($('#lat').length > 0){
+		
+		const lat = document.querySelector('#lat').value;
+		const lng = document.querySelector('#lng').value;
+		const direccion = document.querySelector('#direccion').value;
 
-	if(lat && lng && direccion)
-	{
-		var map = L.map('map').setView([lat, lng], 13);
+		if(lat && lng && direccion)
+		{
+			var map = L.map('map').setView([lat, lng], 13);
 
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
 
-		L.marker([lat, lng]).addTo(map)
-		    .bindPopup(direccion)
-		    .openPopup();
+			L.marker([lat, lng]).addTo(map)
+			    .bindPopup(direccion)
+			    .openPopup();
+		}
 	}
 });
+
+/** agrega position fija en el header al hacer scroll**/
+window.onscroll = () =>{
+	const scroll = window.scrollY;
+
+	const headerNav = document.querySelector('.barra-navegacion');
+
+	if(scroll > 300)
+	{
+		headerNav.classList.add('fixed-top');
+	}
+	else
+	{
+		headerNav.classList.remove('fixed-top');
+	}
+}
