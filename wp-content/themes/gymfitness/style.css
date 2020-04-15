@@ -383,6 +383,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .card{
 	margin-bottom: 4rem;
 	border-bottom: 1px solid var(--grisClaro);
+	overflow: hidden;
 }
 
 .card:last-of-type{
@@ -414,6 +415,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .card img{
 	display:block;
+	transition: transform .5s ease-in-out;
+}
+
+.card:hover img{
+	transform: scale(1.1);
 }
 
 .card .contenido h3{

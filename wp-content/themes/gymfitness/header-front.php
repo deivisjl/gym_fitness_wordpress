@@ -9,7 +9,9 @@
 	<div class="contenedor header-grid">
 		<div class="barra-navegacion">
 			<div class="logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo_sitio">
+				<a href="<?php echo site_url('/') ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo_sitio">
+				</a>
 			</div>
 			<?php  
 				$args = array(
