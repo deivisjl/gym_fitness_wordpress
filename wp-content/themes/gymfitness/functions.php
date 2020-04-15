@@ -51,6 +51,11 @@
 		if(is_page('contacto')) :
 			//cargando el cdn de leaflet
 			wp_enqueue_style('leafleftCSS', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css', array(), '1.6.0');
+		endif;
+
+		if(is_page('inicio')) :
+			//cargando el cdn de bxSliderCSS
+			wp_enqueue_style('bxSliderCSS', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
 		endif;		
 
 		//la hoja de estilos principal
@@ -68,6 +73,11 @@
 		if(is_page('contacto')) :
 			//cargar script de lightbox
 			wp_enqueue_script('leafleftJS', 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js', array(), '1.6.0', true);
+		endif;
+
+		if(is_page('inicio')) :
+			//cargar script de bxSliderJS
+			wp_enqueue_script('bxSliderJS', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12', true);
 		endif;
 	}
 

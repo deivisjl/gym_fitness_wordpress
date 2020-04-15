@@ -4,6 +4,13 @@ jQuery(document).ready(function($){
 		appendTo:'.site-header'
 	});
 
+	//agregar Slider
+	$('.listado-testimoniales').bxSlider({
+		auto:true,
+		mode:'fade',
+		controls:false
+	});
+
 	//Codigo del mapa
 	const lat = document.querySelector('#lat').value;
 	const lng = document.querySelector('#lng').value;
