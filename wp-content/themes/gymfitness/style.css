@@ -726,6 +726,10 @@ body.home .site-header{
 
 /** Barra fija **/
 @media(min-width: 768px){
+	body.ft-activo{
+		margin-top: 4rem;
+	}
+
 	.fixed-top{
 		position: fixed;
 		width: 100%

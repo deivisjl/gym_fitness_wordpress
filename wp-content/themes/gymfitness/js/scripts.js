@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 
 	//Codigo del mapa
 	if($('#lat').length > 0){
-		
+
 		const lat = document.querySelector('#lat').value;
 		const lng = document.querySelector('#lng').value;
 		const direccion = document.querySelector('#direccion').value;
@@ -41,12 +41,16 @@ window.onscroll = () =>{
 
 	const headerNav = document.querySelector('.barra-navegacion');
 
+	const documentBody = document.querySelector('body');
+
 	if(scroll > 300)
 	{
 		headerNav.classList.add('fixed-top');
+		documentBody.classList.add('ft-activo');
 	}
 	else
 	{
+		documentBody.classList.remove('ft-activo');
 		headerNav.classList.remove('fixed-top');
 	}
 }
